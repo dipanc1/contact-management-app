@@ -1,10 +1,9 @@
 export class MyContact{
-  id?: number;
+  id?: string;
   name!: string;
+  phone!: string;
   email!: string;
+  group!: string;
   photo!: string;
-  mobile!: string;
-  company!: string;
-  title!: string;
   groupId!: string;
 }

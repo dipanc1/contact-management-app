@@ -1,0 +1,71 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "John",
+      "phone": "123-456-7890",
+      "email": "mrjn@fdg.com",
+      "group": "jatt",
+      "photo": "https://randomuser.me/api/portraits/med/women",
+      "groupId": "2"
+    },
+    {
+      "id": 2,
+      "name": "John",
+      "phone": "123-456-7890",
+      "email": "mrjn@fdg.com",
+      "group": "pencho",
+      "photo": "https://randomuser.me/api/portraits/med/women",
+      "groupId": "3"
+    },
+    {
+      "id": 3,
+      "name": "John",
+      "phone": "123-456-7890",
+      "email": "mrjn@fdg.com",
+      "group": "jatt",
+      "photo": "https://randomuser.me/api/portraits/med/women",
+      "groupId": "4"
+    },
+    {
+      "id": 4,
+      "name": "John",
+      "phone": "123-456-7890",
+      "email": "mrjn@fdg.com",
+      "group": "jatt",
+      "photo": "https://randomuser.me/api/portraits/med/women",
+      "groupId": "5"
+    },
+    {
+      "id": 5,
+      "name": "John",
+      "phone": "123-456-7890",
+      "email": "mrjn@fdg.com",
+      "group": "jatt",
+      "photo": "https://randomuser.me/api/portraits/med/women",
+      "groupId": "5"
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "jatt"
+    },
+    {
+      "id": 2,
+      "name": "jat32t"
+    },
+    {
+      "id": 3,
+      "name": "ja3245tt"
+    },
+    {
+      "id": 4,
+      "name": "jat455t"
+    },
+    {
+      "id": 5,
+      "name": "jat43453t"
+    }
+  ]
+}
