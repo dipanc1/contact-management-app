@@ -9,22 +9,43 @@
   </div>
 </div>
 
-<!-- View Contact details  -->
+<!-- Condition loading-->
+<div class="my-5" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
 
-<div class="container">
+<!-- display error message -->
+<div class="my-5" *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h4 text-danger fw-bold">
+          <i class="fa fa-exclamation-triangle"></i>
+          {{ errorMessage }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- View Contact details  -->
+<div *ngIf="!loading && isNotEmpty()" class="container">
   <div class="row align-items-center">
     <div class="col-sm-4">
-      <img src="https://via.placeholder.com/250" alt="img">
+      <img [src]="contact[4]" alt="img">
     </div>
     <div class="col-sm-6">
       <ul class="list-group">
-        <li class="list-group-item list-group-item-primary">Name: <span class="fw-bold">Name</span></li>
-        <li class="list-group-item list-group-item-primary">Email: <span class="fw-bold">jatt@jaat.com</span></li>
-        <li class="list-group-item list-group-item-primary">Mobile: <span class="fw-bold">435435453</span></li>
-        <li class="list-group-item list-group-item-primary">Group Name: <span class="fw-bold">Jatt</span></li>
+        <li class="list-group-item list-group-item-primary">Name: <span class="fw-bold">{{contact[1]}}</span></li>
+        <li class="list-group-item list-group-item-primary">Mobile: <span class="fw-bold">{{contact[2]}}</span></li>
+        <li class="list-group-item list-group-item-primary">Email: <span class="fw-bold">{{contact[3]}}</span></li>
+        <li class="list-group-item list-group-item-primary">Group Name: <span class="fw-bold">{{group.name}}</span></li>
       </ul>
     </div>
   </div>
+  <!-- <pre>
+    {{group | json}}
+  </pre> -->
   <div class="row mt-2">
     <div class="col">
       <a routerLink="/" class="btn btn-danger"><i class="fa fa-arrow-alt-circle-left"></i> Back</a>

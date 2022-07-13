@@ -43,14 +43,14 @@ export class ContactService {
   }
 
   // get all groups
-  public getAllGroups(): Observable<MyGroup> {
+  public getAllGroups(): Observable<MyGroup[]> {
     let dataUrl: string = `${this.apiUrl}/groups`;
-    return this.http.get<MyGroup>(dataUrl).pipe(catchError(this.handleError));
+    return this.http.get<MyGroup[]>(dataUrl).pipe(catchError(this.handleError));
   }
 
   // get single group
   public getGroup(contact: MyContact): Observable<MyGroup> {
-    let dataUrl: string = `${this.apiUrl}/groups/${contact.groupId}`;
+    let dataUrl: string = `${this.apiUrl}/groups/${contact}`;
     return this.http.get<MyGroup>(dataUrl).pipe(catchError(this.handleError));
   }
 

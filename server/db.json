@@ -5,7 +5,6 @@
       "name": "John",
       "phone": "123-456-7890",
       "email": "mrjn@fdg.com",
-      "group": "jatt",
       "photo": "https://randomuser.me/api/portraits/med/women",
       "groupId": "2"
     },
@@ -14,7 +13,6 @@
       "name": "John",
       "phone": "123-456-7890",
       "email": "mrjn@fdg.com",
-      "group": "pencho",
       "photo": "https://randomuser.me/api/portraits/med/women",
       "groupId": "3"
     },
@@ -23,16 +21,14 @@
       "name": "John",
       "phone": "123-456-7890",
       "email": "mrjn@fdg.com",
-      "group": "jatt",
       "photo": "https://randomuser.me/api/portraits/med/women",
       "groupId": "4"
     },
     {
       "id": 4,
-      "name": "John",
-      "phone": "123-456-7890",
-      "email": "mrjn@fdg.com",
-      "group": "jatt",
+      "name": "enwdkjfnwk",
+      "phone": "ejwnjwen-456-7890",
+      "email": "pencho@fdg.com",
       "photo": "https://randomuser.me/api/portraits/med/women",
       "groupId": "5"
     },
@@ -41,7 +37,6 @@
       "name": "John",
       "phone": "123-456-7890",
       "email": "mrjn@fdg.com",
-      "group": "jatt",
       "photo": "https://randomuser.me/api/portraits/med/women",
       "groupId": "5"
     }
