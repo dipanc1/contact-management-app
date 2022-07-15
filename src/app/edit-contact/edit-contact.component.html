@@ -3,33 +3,39 @@
     <div class="col">
       <p class="h2 f2-bold text-success"><i class="fa fa-pencil">&nbsp;</i>Edit Contact</p>
       <p class="fst-italic">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestias tempore enim molestiae in odit quas perspiciatis quisquam ducimus earum quos quia quidem eveniet numquam consequatur dolores omnis vero amet laborum nemo, qui, ab illo. Soluta quo aliquam accusamus nulla, nam dignissimos aliquid!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum molestias tempore enim molestiae in odit quas
+        perspiciatis quisquam ducimus earum quos quia quidem eveniet numquam consequatur dolores omnis vero amet laborum
+        nemo, qui, ab illo. Soluta quo aliquam accusamus nulla, nam dignissimos aliquid!
       </p>
     </div>
   </div>
 </div>
 
+<!-- <pre>
+  {{contact | json}}
+</pre> -->
 <!-- edit contact form  -->
 
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <form >
+      <form (submit)="submitUpdate()">
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="name">
+          <input type="text" class="form-control" placeholder="name" [(ngModel)]="contact[0]" name="name" [value]="contact[0]">
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="photo url">
+          <input type="text" class="form-control" placeholder="photo url" [(ngModel)]="contact[3]" name="photo" [value]="contact[3]">
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="mobile">
+          <input type="text" class="form-control" placeholder="mobile" [(ngModel)]="contact[1]" name="phone" [value]="contact[1]">
         </div>
         <div class="mb-2">
-          <input type="text" class="form-control" placeholder="title">
+          <input type="text" class="form-control" placeholder="email" [(ngModel)]="contact[2]" name="email" [value]="contact[2]">
         </div>
         <div class="mb-2">
-          <select class="form-control">
+          <select [(ngModel)]="contact[5]" name="groupId" [value]="contact[5]" class="form-control">
             <option value="">Select a Group</option>
+            <option [value]="group.id" *ngFor="let group of group">{{group.name}}</option>
           </select>
         </div>
         <div class="mb-2">
@@ -40,7 +46,7 @@
     </div>
 
     <div class="col-sm-4">
-      <img src="https://via.placeholder.com/150" alt="image">
+      <img [src]="contact[3]" alt="image">
     </div>
   </div>
 </div>

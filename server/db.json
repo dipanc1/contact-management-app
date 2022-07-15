@@ -6,7 +6,7 @@
       "phone": "123-456-7890",
       "email": "mrjn@fdg.com",
       "photo": "https://randomuser.me/api/portraits/med/women",
-      "groupId": "2"
+      "groupId": 2
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "phone": "123-456-7890",
       "email": "mrjn@fdg.com",
       "photo": "https://randomuser.me/api/portraits/med/women",
-      "groupId": "3"
+      "groupId": 3
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "phone": "123-456-7890",
       "email": "mrjn@fdg.com",
       "photo": "https://randomuser.me/api/portraits/med/women",
-      "groupId": "4"
+      "groupId": 4
     },
     {
       "id": 4,
@@ -30,15 +30,7 @@
       "phone": "ejwnjwen-456-7890",
       "email": "pencho@fdg.com",
       "photo": "https://randomuser.me/api/portraits/med/women",
-      "groupId": "5"
-    },
-    {
-      "id": 5,
-      "name": "John",
-      "phone": "123-456-7890",
-      "email": "mrjn@fdg.com",
-      "photo": "https://randomuser.me/api/portraits/med/women",
-      "groupId": "5"
+      "groupId": 5
     }
   ],
   "groups": [

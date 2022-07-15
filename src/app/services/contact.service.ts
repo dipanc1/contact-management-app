@@ -31,7 +31,7 @@ export class ContactService {
   }
 
   // update contact
-  public updateContact(contact: MyContact, contactId: String): Observable<MyContact[]> {
+  public updateContact(contact: MyContact[], contactId: String): Observable<MyContact[]> {
     let dataUrl: string = `${this.apiUrl}/contacts/${contactId}`;
     return this.http.put<MyContact[]>(dataUrl, contact).pipe(catchError(this.handleError));
   }

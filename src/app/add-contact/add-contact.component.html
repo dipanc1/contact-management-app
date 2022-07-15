@@ -11,42 +11,63 @@
   </div>
 </div>
 
+<!-- Condition loading-->
+<div class="my-5" *ngIf="loading">
+  <app-spinner></app-spinner>
+</div>
+
+<!-- display error message -->
+<div class="my-5" *ngIf="!loading && errorMessage">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <p class="h4 text-danger fw-bold">
+          <i class="fa fa-exclamation-triangle"></i>
+          {{ errorMessage }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- contact form  -->
 
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <form>
+      <form (submit)="addSubmit()">
         <div class="mb-2">
-          <input [(ngModel)]="contact.name" name="name" type="text" class="form-control" placeholder="name">
+          <input [(ngModel)]="contact.name" name="name" type="text" class="form-control" placeholder="name" required>
         </div>
         <div class="mb-2">
-          <input [(ngModel)]="contact.photo" name="photo" type="text" class="form-control" placeholder="photo url">
+          <input [(ngModel)]="contact.photo" name="photo" type="text" class="form-control" placeholder="photo url"
+            required>
         </div>
         <div class="mb-2">
-          <input [(ngModel)]="contact.phone" name="phone" type="text" class="form-control" placeholder="mobile">
+          <input [(ngModel)]="contact.phone" name="phone" type="text" class="form-control" placeholder="mobile"
+            required>
         </div>
         <div class="mb-2">
-          <input [(ngModel)]="contact.email" name="email" type="email" class="form-control" placeholder="email">
+          <input [(ngModel)]="contact.email" name="email" type="email" class="form-control" placeholder="email"
+            required>
         </div>
         <div class="mb-2">
-          <select class="form-control" *ngIf="groups.length>0">
-            <option value="">Select a Group</option>
-            <option [value]="group.id" *ngFor="let group of groups">{{group.name}}</option>
+          <select [(ngModel)]="contact.groupId" class="form-control" *ngIf="groups.length>0">
+            <option *ngFor="let group of groups" [value]="group.id">{{group.name}}</option>
           </select>
         </div>
         <div class="mb-2">
-          <input type="submit" class="btn btn-warning" value="Create">
+          <input type="submit" class="btn btn-warning" value="Create" required>
           <a routerLink="/" class="btn btn-danger ms-2">Close</a>
         </div>
       </form>
     </div>
     <pre>
-      {{contact | json}}
+      {{contact.groupId | json}}
     </pre>
 
     <div class="col-sm-4">
-      <img src="https://via.placeholder.com/150" alt="image">
+      <img [src]="contact.photo" alt="">
     </div>
   </div>
 </div>
